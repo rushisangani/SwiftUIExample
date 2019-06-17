@@ -12,7 +12,7 @@ import SwiftUI
 struct ContentView : View {
     
     /// statuses
-    let status = TestData.statuses()
+    let statuses = TestData.statuses()
     
     /// posts
     let posts = TestData.posts()
@@ -21,14 +21,12 @@ struct ContentView : View {
     var body: some View {
         
         NavigationView {
-            
-            // posts
             List {
                 
                 // statuses
                 ScrollView {
                     HStack(spacing: 10) {
-                        ForEach(status.identified(by: \.id)) { status in
+                        ForEach(statuses.identified(by: \.id)) { status in
                             StatusView(status: status)
                         }
                     }
@@ -36,6 +34,8 @@ struct ContentView : View {
                 }
                 .frame(height: 190)
                 
+                
+                // posts
                 ForEach(posts.identified(by: \.id)) { post in
                     // post view
                     PostView(post: post)
