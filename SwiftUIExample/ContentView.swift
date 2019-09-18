@@ -26,7 +26,7 @@ struct ContentView : View {
                 // statuses
                 ScrollView {
                     HStack(spacing: 10) {
-                        ForEach(statuses.identified(by: \.id)) { status in
+                        ForEach(statuses) { status in
                             StatusView(status: status)
                         }
                     }
@@ -36,8 +36,7 @@ struct ContentView : View {
                 
                 
                 // posts
-                ForEach(posts.identified(by: \.id)) { post in
-                    // post view
+                ForEach(posts) { post in
                     PostView(post: post)
                 }
             }

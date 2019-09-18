@@ -38,7 +38,10 @@ struct PostView: View {
                 }
                 
                 // post content
-                Text(post.content ?? "").lineLimit(nil).font(.body)
+                Text(post.content ?? "")
+                    .lineLimit(nil)
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
             }
             .padding(.leading, 15)
             .padding(.trailing, 15)

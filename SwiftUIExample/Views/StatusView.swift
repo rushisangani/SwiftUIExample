@@ -23,8 +23,8 @@ struct StatusView: View {
             .resizable()  // resizable image
             .frame(width: 110, height: 180) // image frame
             
-             // create outer view with border (color, width, cornerRadius)
-            .border(Color.gray.opacity(0.5), width: 0.5, cornerRadius: 8)
+             // create outer view with border (color, width)
+            .border(Color.gray.opacity(0.5), width: 0.5)
             
              // apply cornerRadius to hide visible cut out after applying border
             .cornerRadius(8)

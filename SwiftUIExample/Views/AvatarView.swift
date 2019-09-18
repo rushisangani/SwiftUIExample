@@ -16,14 +16,14 @@ struct AvatarView: View {
     let image: String
     
     /// size
-    let size: Length
+    let size: CGFloat
     
     /// body
     var body: some View {
         Image(image)
             .resizable()
             .frame(width: size, height: size)
-            .border(Color.gray.opacity(0.5), width: 0.5, cornerRadius: size/2)
+            .border(Color.gray.opacity(0.5), width: 0.5)
             .cornerRadius(size/2)
     }
 }
