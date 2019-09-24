@@ -24,14 +24,14 @@ struct ContentView : View {
             List {
                 
                 // statuses
-                ScrollView {
+                ScrollView(.horizontal, content: {
                     HStack(spacing: 10) {
                         ForEach(statuses) { status in
                             StatusView(status: status)
                         }
                     }
                     .padding(.leading, 10)
-                }
+                })
                 .frame(height: 190)
                 
                 
