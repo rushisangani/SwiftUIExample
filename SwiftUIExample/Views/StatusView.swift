@@ -20,6 +20,7 @@ struct StatusView: View {
         
         // status image
         Image(status.image)
+            
             .resizable()  // resizable image
             .frame(width: 110, height: 180) // image frame
             
