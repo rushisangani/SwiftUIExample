@@ -50,3 +50,9 @@ struct PostView: View {
         .padding(.top, 5)
     }
 }
+
+struct PostView_Previews: PreviewProvider {
+    static var previews: some View {
+        PostView(post: TestData.posts()[1])
+    }
+}

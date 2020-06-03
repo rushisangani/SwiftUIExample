@@ -101,3 +101,9 @@ struct NameOverlay: View {
         .foregroundColor(.white)
     }
 }
+
+struct StatusView_Previews: PreviewProvider {
+    static var previews: some View {
+        StatusView(status: TestData.statuses()[1])
+    }
+}

@@ -23,7 +23,13 @@ struct AvatarView: View {
         Image(image)
             .resizable()
             .frame(width: size, height: size)
-            .border(Color.gray.opacity(0.5), width: 0.5)
-            .cornerRadius(size/2)
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.white.opacity(0.5), lineWidth: 5))
+    }
+}
+
+struct AvatarView_Previews: PreviewProvider {
+    static var previews: some View {
+        AvatarView(image: "steve", size: 150)
     }
 }
